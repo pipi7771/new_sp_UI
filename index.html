@@ -25,7 +25,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="img/favicon.ico">
   
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -33,138 +33,227 @@
 </head>
 
 <body>
+<!-- Fixed Top Bar-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigate</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" class="company_logo" src="img/zurich_logo.png">
+          </a>
+        </div>
+        <div class="navbar-header navbar-right">
+        
+        <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav ">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Gaurav Alisa Apaivongse<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Agent Infomation</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Notification <span class="badge ">14</span></a></li>
+              <li class="divider"></li>
+              <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Chang Password</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log Off</a></li>
+            </ul>
+          </li>
+          <li role="presentation" class="enabled"><a href="#">Help</a></li>
+        </div></div>
+        
+        <div class="navbar-header">
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <!-- All menu links -->
+            <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+            <li><a href="#">My Customers</a></li>
+            <li><a href="#">Proposal</a></li>
+            <li><a href="#">Case Study</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Policy Enquriy</a></li>
+                <li><a href="#">More Action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        </div>
+  </div>
+</nav>
+
+ 
+ 
 <div class="container">
-	<div class="row clearfix">
-		<div class="col-md-6 column">
-			<div class="row clearfix">
-				<div class="col-md-6 column">
-					<img alt="140x140" src="http://lorempixel.com/140/140/">
-				</div>
-				<div class="col-md-6 column">
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 column">
-			<ul class="breadcrumb">
-				<li>
-					<a href="#">Home</a> <span class="divider">/</span>
-				</li>
-				<li>
-					<a href="#">Library</a> <span class="divider">/</span>
-				</li>
-				<li class="active">
-					Data
-				</li>
-			</ul>
-		</div>
-	</div>
+
+  
 	<div class="row clearfix">
 		<div class="col-md-8 column">
-			<ul class="nav nav-pills">
-				<li class="active">
-					<a href="#">Home</a>
-				</li>
-				<li>
-					<a href="#">Profile</a>
-				</li>
-				<li class="disabled">
-					<a href="#">Messages</a>
-				</li>
-				<li class="dropdown pull-right">
-					 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<strong class="caret"></strong></a>
-					<ul class="dropdown-menu">
-						<li>
-							<a href="#">Action</a>
-						</li>
-						<li>
-							<a href="#">Another action</a>
-						</li>
-						<li>
-							<a href="#">Something else here</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							<a href="#">Separated link</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul class="media-list">
+            <li class="media">
+              <a class="media-left" href="#">
+                <img src="images\home_life_insurance.gif" alt="...">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Life Insurance</h4>
+                It is a contract between the policy owner and the insurer, where the insurer agrees to pay a designated beneficiary a sum of money upon the death of the insured or occurrence of the certain events.
+              </div>
+            </li>
+            <li class="media">
+              <a class="media-left" href="#">
+                <img src="images\home_savings.gif" alt="...">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Investment &amp; Savings</h4>
+                It combines investment and protection. Your premiums provide not only a life insurance cover, but part of the premiums will also be invested in specific investment funds of your choice.
+              </div>
+            </li>
+            <li class="media">
+              <a class="media-left" href="#">
+                <img src="images\home_health_insurance.gif" alt="...">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Health &amp; Medical</h4>
+                It provides broad coverage of all reasonable and necessary medical expenses and other related expenses from a covered illness or injury. The policy covers eligible expenses incurred while in the hospital, in the doctor’s office, or at home.
+              </div>
+            </li>
+            <li class="media">
+              <a class="media-left" href="#">
+                <img src="images\home_retirement_plan.gif" alt="...">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Annuity &amp; Pension</h4>
+                It is a periodic payment that continues for a fixed period or for the duration of a designated life or lives. It provides a lifetime income protection against living too long and exhausting one’s savings while the individual is still live.
+              </div>
+            </li>
+            <li class="media">
+              <a class="pull-left" href="#">
+                <img src="images\home_retirement_plan.gif" alt="...">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Annuity &amp; Pension</h4>
+                It is a periodic payment that continues for a fixed period or for the duration of a designated life or lives. It provides a lifetime income protection against living too long and exhausting one’s savings while the individual is still live.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 		</div>
 		<div class="col-md-4 column">
+    
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Don't know what exactly you need?</h4>
+          <p>We can look into your current financial situation, understand your insurance needs,and create a financial plan together.</p>
+          <p class="pull-right"><a class="btn btn-primary btn-lg" href="#" role="button">View Case Studies <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a></p>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Already have a product in mind?</h4>
+          <p>Let's quickly work out a proposal tailored to your personal needs.</p>
 			<form role="form">
 				<div class="form-group">
-					 <label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="exampleInputEmail1">
+        
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Select Product" aria-label="...">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
+                <li>LIFETIME INCOME - C04</li>
+                <li>ENDOWMENT PLAN 2013 - END2013</li>
+                <li>ENDOWMENT CLASSIC - 0171</li>
+                <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
+                <li>LIFETIME INCOME - C04</li>
+                <li>ENDOWMENT PLAN 2013 - END2013</li>
+                <li>ENDOWMENT CLASSIC - 0171</li>
+                <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
+                <li>LIFETIME INCOME - C04</li>
+                <li>ENDOWMENT PLAN 2013 - END2013</li>
+                <li>ENDOWMENT CLASSIC - 0171</li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
 				</div>
 				<div class="form-group">
-					 <label for="exampleInputPassword1">Password</label><input type="password" class="form-control" id="exampleInputPassword1">
+					  <label for="">Or</label>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Select Package" aria-label="...">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
+                <li>LIFETIME INCOME - C04</li>
+                <li>ENDOWMENT PLAN 2013 - END2013</li>
+                <li>ENDOWMENT CLASSIC - 0171</li>
+                <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
+                <li>LIFETIME INCOME - C04</li>
+                <li>ENDOWMENT PLAN 2013 - END2013</li>
+                <li>ENDOWMENT CLASSIC - 0171</li>
+                <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
+                <li>LIFETIME INCOME - C04</li>
+                <li>ENDOWMENT PLAN 2013 - END2013</li>
+                <li>ENDOWMENT CLASSIC - 0171</li>
+                <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
+                <li>LIFETIME INCOME - C04</li>
+                <li>ENDOWMENT PLAN 2013 - END2013</li>
+                <li>ENDOWMENT CLASSIC - 0171</li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
 				</div>
-				<div class="form-group">
-					 <label for="exampleInputFile">File input</label><input type="file" id="exampleInputFile">
-					<p class="help-block">
-						Example block-level help text here.
-					</p>
-				</div>
-				<div class="checkbox">
-					 <label><input type="checkbox"> Check me out</label>
-				</div> <button type="submit" class="btn btn-default">Submit</button>
+         <p class="pull-right"><a class="btn btn-primary btn-lg" href="#" role="button">Submit <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a></p>
 			</form>
+      
+        </div>
+      </div>
+      
+      
 		</div>
 	</div>
-	<div class="row clearfix">
-		<div class="col-md-4 column">
-			<p>
-				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-			</p>
-		</div>
-		<div class="col-md-4 column">
-			<p>
-				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-			</p>
-		</div>
-		<div class="col-md-4 column">
-			<form role="form">
-				<div class="form-group">
-					 <label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="exampleInputEmail1">
-				</div>
-				<div class="form-group">
-					 <label for="exampleInputPassword1">Password</label><input type="password" class="form-control" id="exampleInputPassword1">
-				</div>
-				<div class="form-group">
-					 <label for="exampleInputFile">File input</label><input type="file" id="exampleInputFile">
-					<p class="help-block">
-						Example block-level help text here.
-					</p>
-				</div>
-				<div class="checkbox">
-					 <label><input type="checkbox"> Check me out</label>
-				</div> <button type="submit" class="btn btn-default">Submit</button>
-			</form>
-		</div>
-	</div>
-	<div class="row clearfix">
-		<div class="col-md-4 column">
-			<p>
-				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
-			</p>
-		</div>
-		<div class="col-md-4 column">
-			<img alt="140x140" src="http://lorempixel.com/140/140/">
-		</div>
-		<div class="col-md-4 column">
-			<ul class="breadcrumb">
-				<li>
-					<a href="#">Home</a> <span class="divider">/</span>
-				</li>
-				<li>
-					<a href="#">Library</a> <span class="divider">/</span>
-				</li>
-				<li class="active">
-					Data
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
+ 
+</div> 
+<footer>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#footer-body">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="footer-bar-btns visible-xs">
+                    <li><a href="#" class="btn" title="History"><i class="fa fa-2x fa-clock-o blue-text"></i></a></li>
+                    <li><a href="#" class="btn" title="Favourites"><i class="fa fa-2x fa-star yellow-text"></i></a></li>
+                    <li><a href="#" class="btn" title="Subscriptions"><i class="fa fa-2x fa-rss-square orange-text"></i></a></li>
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse" id="footer-body">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Browse Our Library</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Our Partners</a></li>
+                    <li><a href="#">User Review</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 </body>
 </html>
