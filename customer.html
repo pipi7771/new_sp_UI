@@ -13,6 +13,7 @@
 	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
 	
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -34,6 +35,11 @@
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/app/directives.js"></script>
   <script type="text/javascript" src="js/app/controllers.js"></script>
+  
+  <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/locales/bootstrap-datetimepicker.th.js" charset="UTF-8"></script>
+
+
 </head>
 
 <body>
@@ -43,27 +49,152 @@
 <div class="container">
   
   <sp-header-nav></sp-header-nav>
-  
 	<div class="row clearfix">
-		<div class="col-md-8 column">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <product_cate_media></product_cate_media>
-        </div>
-      </div>
-		</div>
-		<div class="col-md-4 column">
-    
+		<div class="col-md-12 column">
+			<div class="panel-group" id="panel-183287">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-183287" href="#panel-element-14050">Customer Enquriy</a>
+             <button type="button" class="btn btn-default">Search</button>
+					</div>
+          <form role="form">
+            <div id="panel-element-14050" class="panel-collapse collapse in">
+            
+              <div class="panel-body">
+                <div class="row clearfix form-group">
+                
+                  <div class="col-md-4 column">
+                       <label for="firstName">First Name</label><input type="firstName" class="form-control" id="firstName" />
+                  </div>
+                  <div class="col-md-4 column">
+                       <label for="lastName">Last Name</label><input type="lastName" class="form-control" id="lastName" />
+                  </div>
+                  <div class="col-md-4 column">
+                      <label for="gender">Gender</label>
+                      <div class=" btn-group-justified btn-group" role="group" id="gender" aria-label="...">
+                        <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default active" >Not selected</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default">Female</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default">Male</button>
+                        </div>
+                      </div>
+                  </div>
+                  
+                </div><!--end of form group, 1st row-->
 
-      
-      
+                <div class="row clearfix form-group">
+                
+                  <div class="col-md-4 column">
+                    <label for="birthday" class="control-label">Birthday</label>
+                    <div class="input-group date form_date" id="birthday_picker" data-date="01 01 1980" data-date-format="dd MM yyyy" data-link-field="birthday" data-link-format="yyyy-mm-dd">
+                      <input class="form-control" type="text" value="" readonly>
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-4 column">
+                      <label for="idType">Identity Card Type</label>
+                      <div class="btn-group-justified btn-group" role="group" id="idType" aria-label="...">
+                        <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default active" >None</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default">ID Card</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default">Passport</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            Others
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <li><a href="#">Dropdown link</a></li>
+                            <li><a href="#">Dropdown link</a></li>
+                            <li><a href="#">Dropdown link</a></li>
+                            <li><a href="#">Dropdown link</a></li>
+                            <li><a href="#">Dropdown link</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col-md-4 column">
+                       <label for="idNumber">Identity Card Number</label><input type="idNumber" class="form-control" id="idNumber" />
+                  </div><!--end of column-->
+                  
+                </div><!--end of form group, 2st row-->
+                
+                
+                <div class="row clearfix form-group">
+                
+                  <div class="col-md-4 column">
+                       <label for="policyNumber">Policy Number</label><input type="policyNumber" class="form-control" id="policyNumber" />
+                  </div>
+                  
+                  <div class="col-md-4 column">
+                      <label for="blackList">Black List?</label>
+                      <div class="btn-group-justified btn-group" role="group" id="blackList" aria-label="...">
+                        <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default active" >None</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default">Yes</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                          <button type="button" class="btn btn-default">No</button>
+                        </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col-md-4 column">
+                  </div><!--end of column-->
+                  
+                </div><!--end of form group, 2st row-->
+                  
+              </div>
+            </div> <!--end of panel body-->
+            
+          </form>
+				</div><!--end of panel 1-->
+        
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title" data-toggle="collapse" data-parent="#panel-183287" href="#panel-element-569057">Enquriy Result</a>
+					</div>
+					<div id="panel-element-569057" class="panel-collapse collapse">
+						<div class="panel-body">
+							Anim pariatur cliche...
+						</div>
+					</div>
+				</div><!--end of panel 2-->
+			</div><!--end of panel group-->
 		</div>
-    
 	</div>
- 
-</div> 
+  
+  
+</div>
 
 <sp-footer-nav></sp-footer-nav>
+<script type="text/javascript">
 
+	$('#birthday_picker').datetimepicker({
+       // language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	
+</script>
 </body>
 </html>
