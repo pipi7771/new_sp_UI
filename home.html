@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="sp-directives">
+<html lang="en" ng-app="salesPlatform">
 <head>
   <meta charset="utf-8">
   <title>eBao SalesPlatform</title>
@@ -33,6 +33,7 @@
   
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/app/directives.js"></script>
+  <script type="text/javascript" src="js/app/controllers.js"></script>
 </head>
 
 <body>
@@ -72,19 +73,8 @@
                 <input type="text" class="form-control" placeholder="Select Product" aria-label="...">
                 <div class="input-group-btn">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
-                  <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                    <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
-                    <li>LIFETIME INCOME - C04</li>
-                    <li>ENDOWMENT PLAN 2013 - END2013</li>
-                    <li>ENDOWMENT CLASSIC - 0171</li>
-                    <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
-                    <li>LIFETIME INCOME - C04</li>
-                    <li>ENDOWMENT PLAN 2013 - END2013</li>
-                    <li>ENDOWMENT CLASSIC - 0171</li>
-                    <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
-                    <li>LIFETIME INCOME - C04</li>
-                    <li>ENDOWMENT PLAN 2013 - END2013</li>
-                    <li>ENDOWMENT CLASSIC - 0171</li>
+                  <ul class="dropdown-menu dropdown-menu-right" role="menu"  ng-controller="ProductListController as productListCTRL">
+                    <li ng-repeat="product in productListCTRL.products">{{product.name}} - {{product.code}}</li>
                   </ul>
                 </div><!-- /btn-group -->
               </div><!-- /input-group -->
@@ -95,23 +85,8 @@
                 <input type="text" class="form-control" placeholder="Select Package" aria-label="...">
                 <div class="input-group-btn">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
-                  <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                    <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
-                    <li>LIFETIME INCOME - C04</li>
-                    <li>ENDOWMENT PLAN 2013 - END2013</li>
-                    <li>ENDOWMENT CLASSIC - 0171</li>
-                    <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
-                    <li>LIFETIME INCOME - C04</li>
-                    <li>ENDOWMENT PLAN 2013 - END2013</li>
-                    <li>ENDOWMENT CLASSIC - 0171</li>
-                    <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
-                    <li>LIFETIME INCOME - C04</li>
-                    <li>ENDOWMENT PLAN 2013 - END2013</li>
-                    <li>ENDOWMENT CLASSIC - 0171</li>
-                    <li>ANNUAL CASHBACK ENDOWMENT 21 - 0314</li>
-                    <li>LIFETIME INCOME - C04</li>
-                    <li>ENDOWMENT PLAN 2013 - END2013</li>
-                    <li>ENDOWMENT CLASSIC - 0171</li>
+                  <ul class="dropdown-menu dropdown-menu-right" role="menu" ng-controller="PackageListController as packageListCTRL">
+                    <li ng-repeat="package in packageListCTRL.packages">{{package.name}} - {{package.code}}</li>
                   </ul>
                 </div><!-- /btn-group -->
               </div><!-- /input-group -->

@@ -1,6 +1,6 @@
 (function () {
 
-	var app = angular.module('sp-directives', []);
+	var app = angular.module('spDirectives', []);
   
   
 	app.directive("spHeaderNav", function() {
