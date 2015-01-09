@@ -34,28 +34,16 @@
           <p>Let's quickly work out a proposal tailored to your personal needs.</p>
           <form role="form">
             <div class="form-group">
-            
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Select Product" aria-label="...">
-                <div class="input-group-btn">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
-                  <ul class="dropdown-menu dropdown-menu-right" role="menu"  ng-controller="ProductListController as productListCTRL">
-                    <li ng-repeat="product in productListCTRL.products">{{product.name}} - {{product.code}}</li>
-                  </ul>
-                </div><!-- /btn-group -->
-              </div><!-- /input-group -->
-            </div>
-            <div class="form-group">
+                          
+              <select class="form-control" ng-controller="ProductListController as productListCTRL">
+                <option>Select a product</option>
+                <option ng-repeat="product in productListCTRL.products">{{product.name}} - {{product.code}}</option>
+              </select>
               <label for="">Or</label>
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Select Package" aria-label="...">
-                <div class="input-group-btn">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="caret"></span></button>
-                  <ul class="dropdown-menu dropdown-menu-right" role="menu" ng-controller="PackageListController as packageListCTRL">
-                    <li ng-repeat="package in packageListCTRL.packages">{{package.name}} - {{package.code}}</li>
-                  </ul>
-                </div><!-- /btn-group -->
-              </div><!-- /input-group -->
+              <select class="form-control" ng-controller="PackageListController as packageListCTRL">
+                <option>Select a product package</option>
+                <option ng-repeat="package in packageListCTRL.packages">{{package.name}} - {{package.code}}</option>
+              </select>
             </div>
              <p class="pull-right"><a class="btn btn-primary btn-lg" href="#" role="button">Submit <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a></p>
           </form>

@@ -1,20 +1,20 @@
 (function() {
-  var app = angular.module('salesPlatform', ['spDirectives']);
+  var spControllers = angular.module('spControllers', ['spDirectives']);
 
-  app.controller('ProductListController', function(){
+  spControllers.controller('ProductListController', function(){
     console.log(productList);
     this.products = productList;
   });
 
   
-  app.controller('PackageListController', function(){
+  spControllers.controller('PackageListController', function(){
     console.log(packageList);
     this.packages = packageList;
   });
   
-  app.controller('headerNavTabController', function(){
+  spControllers.controller('headerNavTabController', function(){
     console.log("this.tab 1 = " + this.tabx);
-    if (!this.tabx) {this.tabx = 1;}
+    if (!this.tabx) {this.tabx = 1;};
     //console.log("this.tab 2 = " + this.tabx);
     
     this.setTab = function(newValue){
@@ -26,13 +26,10 @@
 
     this.isSet = function(tabName){
     //console.log("getTab 1, this.tab = " + this.tab + "  tabName = " + tabName + "  return = " + (this.tab == tabName));
-    var re = (this.tabx === tabName);
-   // console.log("getTab 2, this.tab = " + this.tab + "   result  = " + re);
-   // console.log("getTab 2, this.tab = " + this.tabx + "  tabName = " + tabName + "  return = " +  re);
-    return re
-    }
-    
+      return (this.tabx === tabName);
+    };   
   });
+  
 
 
   var productList = [
@@ -51,7 +48,7 @@
   ];
   
   var packageList = [
-    { name: 'ANNUAL CASHBACK ENDOWMENT21', code: '0314'},
+    { name: 'ANNUAL CASHBACK ENDOWMENT21ENDOWMENT21', code: '0314'},
     { name: 'LIFETIME INCOME', code: 'C04'},
     { name: 'ENDOWMENT PLAN 2013', code: 'END2013'},
     { name: 'ENDOWMENT CLASSIC', code: '0171'},
