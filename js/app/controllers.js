@@ -12,23 +12,6 @@
     this.packages = packageList;
   });
   
-  spControllers.controller('headerNavTabController', function(){
-    console.log("this.tab 1 = " + this.tabx);
-    if (!this.tabx) {this.tabx = 1;};
-    //console.log("this.tab 2 = " + this.tabx);
-    
-    this.setTab = function(newValue){
-    //console.log("setTab 1, this.tab = " + this.tab);
-      this.tabx = newValue;
-      
-    //console.log("setTab 2, this.tab = " + this.tab);
-    };
-
-    this.isSet = function(tabName){
-    //console.log("getTab 1, this.tab = " + this.tab + "  tabName = " + tabName + "  return = " + (this.tab == tabName));
-      return (this.tabx === tabName);
-    };   
-  });
   
 
 
