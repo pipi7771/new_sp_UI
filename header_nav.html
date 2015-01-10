@@ -20,10 +20,10 @@
             <div class="col-md-6">
               <ul class="nav navbar-nav">
                 <!-- All menu links -->
-                <li ng-class = "{active: headerNavTabCTRL.isSet(1)}" class=""><a ng-click= "headerNavTabCTRL.setTab(1)" href="#">Home</a></li>
-                <li ng-class = "{active: headerNavTabCTRL.isSet(2)}" class=""><a ng-click= "headerNavTabCTRL.setTab(2)" href="#">My Customers</a></li>
-                <li ng-class = "{active: headerNavTabCTRL.isSet(3)}" class=""><a ng-click= "headerNavTabCTRL.setTab(3)" href="#">Proposal</a></li>
-                <li ng-class = "{active: headerNavTabCTRL.isSet(4)}" class=""><a ng-click= "headerNavTabCTRL.setTab(4)" href="#">Case Study</a></li>
+                <li ng-class="{active: $state.includes('home')}"><a ui-sref="home">Home</a></li>
+                <li ng-class="{active: $state.includes('customer')}"><a ui-sref="customer">My Customers</a></li>
+                <li ng-class="{active: $state.includes('proposal')}"><a ui-sref="proposal">Proposal</a></li>
+                <li ng-class="{active: $state.includes('case')}"><a ui-sref="case">Case Study</a></li></a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
@@ -50,7 +50,7 @@
                     <li><a href="#"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Log Off</a></li>
                   </ul>
                 </li>
-                <li role="presentation" class="enabled"><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
+                <li role="presentation" class="enabled"><a ui-sref="about"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
               </ul>
             </div>
           </div>
