@@ -2,13 +2,13 @@
   var spControllers = angular.module('spControllers', ['spDirectives']);
 
   spControllers.controller('ProductListController', function(){
-    console.log(productList);
+   // console.log(productList);
     this.products = productList;
   });
 
   
   spControllers.controller('PackageListController', function(){
-    console.log(packageList);
+    //console.log(packageList);
     this.packages = packageList;
   });
   

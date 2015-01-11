@@ -1,9 +1,9 @@
 
 <!-- Fixed Top Bar-->
-<nav class="navbar navbar-default  navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default  navbar-fixed-top" role="navigation" ng-controller="navCollapseCtrl">
   <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header_body ">
+        <div class="navbar-header" >
+          <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
             <span class="sr-only">Toggle navigate</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -14,24 +14,23 @@
           </a>
         </div>
         
-        
-        <div class="navbar-collapse collapse" id="header_body">
+        <div class="navbar-collapse collapse" id="header_body" collapse="isCollapsed">
           <div class="row">
             <div class="col-md-6">
               <ul class="nav navbar-nav">
                 <!-- All menu links -->
-                <li ng-class="{active: $state.includes('home')}"><a ui-sref="home">Home</a></li>
-                <li ng-class="{active: $state.includes('customer')}"><a ui-sref="customer">My Customers</a></li>
-                <li ng-class="{active: $state.includes('proposal')}"><a ui-sref="proposal">Proposal</a></li>
-                <li ng-class="{active: $state.includes('case')}"><a ui-sref="case">Case Study</a></li></a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
+                <li ng-class="{active: $state.includes('home')}"><a ui-sref="home" ng-click="isCollapsed = true">Home</a></li>
+                <li ng-class="{active: $state.includes('customer')}"><a ui-sref="customer" ng-click="isCollapsed = true">My Customers</a></li>
+                <li ng-class="{active: $state.includes('proposal')}"><a ui-sref="proposal" ng-click="isCollapsed = true">Proposal</a></li>
+                <li ng-class="{active: $state.includes('case')}"><a ui-sref="case" ng-click="isCollapsed = true">Case Study</a></li></a></li>
+                <li class="dropdown" dropdown>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" dropdown-toggle role="button" aria-expanded="false">More <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Policy Enquriy</a></li>
-                    <li><a href="#">More Action</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#" ng-click="isCollapsed = true">Policy Enquriy</a></li>
+                    <li><a href="#" ng-click="isCollapsed = true">More Action</a></li>
+                    <li><a href="#" ng-click="isCollapsed = true">Something else here</a></li>
                     <li class="divider"></li>
-                    <li><a href="#">One more separated link</a></li>
+                    <li><a href="#" ng-click="isCollapsed = true">One more separated link</a></li>
                   </ul>
                 </li>
               </ul>
@@ -39,22 +38,29 @@
 
             <div class="col-md-3 navbar-right">
               <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Alisa Apaivongse<span class="caret"></span></a>
+                <li class="dropdown" dropdown>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" dropdown-toggle role="button" aria-expanded="false">Alisa Apaivongse<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Agent Infomation</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Notification <span class="badge ">14</span></a></li>
+                    <li><a href="#"ng-click="isCollapsed = true"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Agent Infomation</a></li>
+                    <li><a href="#"ng-click="isCollapsed = true"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Notification <span class="badge ">14</span></a></li>
                     <li class="divider"></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Chang Password</a></li>
+                    <li><a href="#"ng-click="isCollapsed = true"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Chang Password</a></li>
                     <li class="divider"></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Log Off</a></li>
+                    <li><a href="#"ng-click="isCollapsed = true"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Log Off</a></li>
                   </ul>
                 </li>
-                <li role="presentation" class="enabled"><a ui-sref="about"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
+                <li role="presentation" class="enabled"><a ui-sref="about" ng-click="isCollapsed = true"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
               </ul>
             </div>
           </div>
         </div>
-        
   </div>
 </nav>
+
+<script type="text/javascript" >
+$(document).on('click.nav','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') || $(e.target).is('button')) {
+        $(this).collapse('hide');
+    }
+});
+</script>

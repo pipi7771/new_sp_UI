@@ -1,7 +1,9 @@
 // Make sure to include the `ui.router` module as a dependency
 angular.module('myApp', [
   'spControllers',
+  'headerController',
   'ui.router',
+  'ui.bootstrap'
 ])
 
 .run(
@@ -53,26 +55,26 @@ angular.module('myApp', [
 
           // Use a url of "/" to set a states as the "index".
           url: "/",
-          templateUrl: 'home.html'
+          templateUrl: 'home/home.html'
         })
 
         .state("customer", {
 
           // Use a url of "/" to set a states as the "index".
           url: "/customer",
-          templateUrl: 'customer.html'
+          templateUrl: 'customer/customer.html'
         })
         .state("proposal", {
 
           // Use a url of "/" to set a states as the "index".
           url: "/proposal",
-          templateUrl: 'proposal.html'
+          templateUrl: 'proposal/proposal.html'
         })
         .state("case", {
 
           // Use a url of "/" to set a states as the "index".
           url: "/casestudy",
-          templateUrl: 'case_study.html'
+          templateUrl: 'case_study/case_study.html'
         })
         ///////////
         // About //
