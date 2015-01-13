@@ -39,7 +39,9 @@
                 <option>Select a product</option>
                 <option ng-repeat="product in productListCTRL.products">{{product.name}} - {{product.code}}</option>
               </select>
-              <label for="">Or</label>
+            </div>
+            <div class="form-group">
+             <p class="pull-right"><a class="btn btn-primary btn-lg" href="#" role="button">Submit <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a></p>
               <select class="form-control" ng-controller="PackageListController as packageListCTRL">
                 <option>Select a product package</option>
                 <option ng-repeat="package in packageListCTRL.packages">{{package.name}} - {{package.code}}</option>

@@ -6,10 +6,9 @@
   });
   
   headerControllers.controller('cssController', function ($scope) {
-    //$scope.stylesheet_href = 'css/bootstrap.css';
-    $scope.stylesheet_href = 'css/bootstrap.darkly.css';
-    //$scope.stylesheet_href = 'css/bootstrap.cerulean.css';
+    $scope.bootstrap_css = 'css/bootstrap.css';
+    //$scope.bootstrap_css = 'css/bootstrap.darkly.css';
+    //$scope.bootstrap_css = 'css/bootstrap.cerulean.css';
   });
   
 })();
-

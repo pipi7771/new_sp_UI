@@ -37,7 +37,7 @@ angular.module('myApp', [
         //.when('/user/:id', '/contacts/:id')
 
         // If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
-        .otherwise('/');
+        //.otherwise('/');
 
 
       //////////////////////////
