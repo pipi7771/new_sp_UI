@@ -35,18 +35,11 @@
                   <div class="col-md-4 column">
                        <label for="lastName">Last Name</label><input type="lastName" class="form-control" id="lastName" />
                   </div>
-                  <div class="col-md-4 column">
-                      <label for="gender">Gender</label>
+                  <div class="col-md-4 column" ng-controller="genderCheckBoxCTRL">
+                      <label for="gender">Gender{{genderCheckBox}}</label>
                       <div class="btn-group btn-group-justified" data-toggle="buttons">
-                        <label class="btn active btn-default">
-                          <input type="radio" name="gender" id="option1" autocomplete="off" checked> All
-                        </label>
-                        <label class="btn btn-default">
-                          <input type="radio" name="gender" id="option2" autocomplete="off"> Female
-                        </label>
-                        <label class="btn btn-default">
-                          <input type="radio" name="gender" id="option3" autocomplete="off"> Male
-                        </label>
+                          <label class="btn btn-default" ng-model="genderCheckBox.male" btn-checkbox>Male</label>
+                          <label class="btn btn-default" ng-model="genderCheckBox.female" btn-checkbox>Female</label>
                       </div>
                   </div>
                   
@@ -56,38 +49,21 @@
                 
                   <div class="col-md-4 column">
                     <label for="birthday" class="control-label">Birthday</label>
-                    <div class="input-group date form_date" id="birthday_picker" data-date="01 01 1980" data-date-format="dd MM yyyy" data-link-field="birthday" data-link-format="yyyy-mm-dd">
-                      <input class="form-control" type="text" value="" readonly>
-                      <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-                      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    <div class="input-group date form_date" id="birthday_picker" data-date="01 01 
+                      <div class="input-group" ng-controller="datepickerCTRL">
+                        <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                        <span class="input-group-btn">
+                          <button type="button" class="btn btn-default" ng-click="clear()"><i class="glyphicon glyphicon-remove"></i></button>
+                          <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
                     </div>
                   </div>
                   
                   <div class="col-md-4 column">
                       <label for="idType">Identity Card Type</label>
-                      <div class="btn-group-justified btn-group" role="group" id="idType" aria-label="...">
-                        <div class="btn-group" role="group">
-                          <button type="button" class="btn btn-default active" >All</button>
-                        </div>
-                        <div class="btn-group" role="group">
-                          <button type="button" class="btn btn-default">ID Card</button>
-                        </div>
-                        <div class="btn-group" role="group">
-                          <button type="button" class="btn btn-default">Passport</button>
-                        </div>
-                        <div class="btn-group" role="group">
-                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                            Others
-                            <span class="caret"></span>
-                          </button>
-                          <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                            <li><a href="#">Dropdown link</a></li>
-                            <li><a href="#">Dropdown link</a></li>
-                            <li><a href="#">Dropdown link</a></li>
-                            <li><a href="#">Dropdown link</a></li>
-                            <li><a href="#">Dropdown link</a></li>
-                          </ul>
-                        </div>
+                      <div class="btn-group-justified btn-group" role="group" id="idType" aria-label="..." ng-controller="idController">
+                      <select class="form-control" ng-model="idTypes" ng-options="name for name in idTypes.name"><option></option></select>
+                        
                       </div>
                   </div>
                   
@@ -221,21 +197,6 @@
 	</div>
   
   
-
-<script type="text/javascript">
-
-	$('#birthday_picker').datetimepicker({
-       // language:  'fr',
-        weekStart: 1,
-        todayBtn:  1,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
-		forceParse: 0
-    });
-	
-</script>
 </div>
 </body>
 </html>

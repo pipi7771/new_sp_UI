@@ -1,5 +1,5 @@
 .company_logo {
-  width:150px;
+  width:140px;
   height:40px;
 }
 .ebao_logo{
@@ -13,7 +13,6 @@
 body {
   padding-top: 60px;
   padding-bottom: 70px;
-  min-height: 900px;
 }
 
 .prod_cate_group_list{
@@ -23,4 +22,9 @@ body {
 .panel-table {
   padding: 0px;
   margin-bottom: 0px;
+}
+
+.nav>li>a {
+  padding-left: 10px;
+  padding-right: 10px;
 }
