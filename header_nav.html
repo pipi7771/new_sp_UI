@@ -15,11 +15,11 @@
         </div>
         
         <div class="navbar-collapse collapse" id="header_body" collapse="isCollapsed">
-          <div class="row">
+
             <div class="col-md-6">
               <ul class="nav navbar-nav">
                 <!-- All menu links -->
-                <li ng-class="{active: $state.includes('home')}"><a ui-sref="home" ng-click="isCollapsed = true">Home</a></li>
+                <li ng-class="{active: $state.includes('home')}"><a ui-sref="ebao" ng-click="isCollapsed = true">Home</a></li>
                 <li ng-class="{active: $state.includes('customer')}"><a ui-sref="customer" ng-click="isCollapsed = true">My Customers</a></li>
                 <li ng-class="{active: $state.includes('proposal')}"><a ui-sref="proposal" ng-click="isCollapsed = true">Proposal</a></li>
                 <li ng-class="{active: $state.includes('case')}"><a ui-sref="case" ng-click="isCollapsed = true">Case Study</a></li></a></li>
@@ -37,7 +37,7 @@
             </div>
 
             <div class="col-md-3 navbar-right">
-              <ul class="nav navbar-nav">
+              <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" dropdown>
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" dropdown-toggle role="button" aria-expanded="false">Alisa Apaivongse<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
@@ -52,15 +52,6 @@
                 <li role="presentation" class="enabled"><a ui-sref="about" ng-click="isCollapsed = true"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
               </ul>
             </div>
-          </div>
         </div>
   </div>
 </nav>
-
-<script type="text/javascript" >
-$(document).on('click.nav','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a') || $(e.target).is('button')) {
-        $(this).collapse('hide');
-    }
-});
-</script>

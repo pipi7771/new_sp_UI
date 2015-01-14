@@ -2,6 +2,7 @@
 angular.module('myApp', [
   'spControllers',
   'headerController',
+  'icpControllers',
   'ui.router',
   'ui.bootstrap'
 ])
@@ -51,7 +52,7 @@ angular.module('myApp', [
         // Home //
         //////////
 
-        .state("home", {
+        .state("ebao", {
 
           // Use a url of "/" to set a states as the "index".
           url: "/",
