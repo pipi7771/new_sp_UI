@@ -10,8 +10,8 @@
   spControllers.controller('PackageListController', function(){
     //console.log(packageList);
     this.packages = packageList;
+    //this.packages = $http.get('/sp/packaglist.json?"');
   });
-  
   
 
   var productList = [
