@@ -1,17 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
 </head>
 
 <body>
- 
 <div class="container">
-  proposal
- 
+
+    <form class="form-horizontal" role="form" ng-controller="ProspectController as prospectCTRL">
+
+        <wizard on-finish="finishedWizard()">
+            <wz-step title="Enter Basic Information">
+                <div class="col-md-12 column">
+
+                    <div class="form-group">
+                        <label for="firstname" class="col-md-2 control-label">Name</label>
+
+                        <div class="col-md-3">
+                            <input ng-model="prospect.firstName" class="form-control" id="firstname"
+                                   value="{{firstName}}">
+                        </div>
+                        <div class="col-md-3">
+                            <input ng-model="prospect.lastName" class="form-control" id="lastName"
+                                   value="{{lastName}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 column">
+
+                    <div class="form-group">
+
+                        <label for="gender" class="col-md-2 control-label">Gender</label>
+
+                        <div class="col-md-3">
+                            <div class="btn-group btn-group-justified" data-toggle="buttons">
+
+                                <label class="btn btn-default">
+                                    <input ng-model="prospect.gender" type="radio" name="gender" value="F"> Female
+                                </label>
+                                <label class="btn btn-default">
+                                    <input ng-model="prospect.gender" type="radio" name="gender" value="M"> Male
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 column">
+                    <div class="form-group">
+
+                        <label for="birthday" class="col-md-2 control-label">Birthday</label>
+
+                        <div class="col-md-3">
+                            <div class="input-group date form_date" id="birthday_picker" data-date="01 01
+                      <div class=" input-group
+                            " ng-controller="datepickerCTRL">
+                            <input type="text" class="form-control" datepicker-popup="{{format}}"
+                                   ng-model="prospect.birthday"
+                                   is-open="opened" min-date="minDate" max-date="'2015-06-22'"
+                                   datepicker-options="dateOptions" date-disabled="disabled(date, mode)"
+                                   ng-required="true" close-text="Close"/>
+                        <span class="input-group-btn">
+                          <button type="button" class="btn btn-default" ng-click="clear()"><i
+                                  class="glyphicon glyphicon-remove"></i></button>
+                          <button type="button" class="btn btn-default" ng-click="open($event)"><i
+                                  class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                        </div>
+                    </div>
+                </div>
 </div>
 
+<div class="col-md-12 column">
+    <div class="form-group">
+        <label for="age" class="col-md-2 control-label">Age</label>
+
+        <div class="col-md-3">
+            <input ng-model="prospect.age" class="form-control" id="age" value="{{age}}">
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 column">
+    <div class="form-group">
+        <label for="smoking" class="col-md-2 control-label">Smoking Status</label>
+
+        <div class="col-md-3">
+            <div class="btn-group btn-group-justified" data-toggle="buttons">
+
+                <label class="btn btn-default">
+                    <input ng-model="prospect.smoking" type="radio" name="smoking" value="Y"> Smoker
+                </label>
+                <label class="btn btn-default">
+                    <input ng-model="prospect.smoking" type="radio" name="smoking" value="N">
+                    None-Smoker
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 column">
+    <div class="form-group">
+        <label for="firstname" class="col-md-2 control-label">Occupation</label>
+
+        <div class="col-md-3">
+            <select class="form-control" ng-model="prospect.occupation"
+                    ng-options="occupation.code as occupation.desc for occupation in occupations"></select>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 column">
+    <div class="form-group">
+        <label for="firstname" class="col-md-2 control-label">Relationship with ph</label>
+
+        <div class="col-md-3">
+            <select class="form-control" ng-model="prospect.phIndi"
+                    ng-options="relatePh.code as relatePh.desc for relatePh in relatePhs"></select>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 column">
+    <div class="form-group">
+
+        <p class="bg-danger">{{prospect}}</p>
+    </div>
+</div>
+
+</form>
+<p class="pull-right"><a wz-next class="btn btn-primary btn-lg" href="#" role="button">Next <span
+        class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a></p>
+
+<p class="pull-left"><a wz-previous class="btn btn-primary btn-lg" href="#" role="button">Back <span
+        class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span></a></p>
+
+<p class="pull-left"><a href="#" ng-click="save();" class="btn btn-primary btn-lg btn-block">Save<span
+        class="glyphicon glyphicon-floppy-saved"></span> </a></p>
+
+</wz-step>
+<wz-step title="Design Insurance Plan">
+    <h1>Continuing</h1>
+
+    <p>You have continued here!</p>
+    <input class="btn btn-primary btn-lg" type="submit" wz-previous value="Back"/>
+    <input class="btn btn-primary btn-lg" type="submit" wz-next value="Next"/>
+</wz-step>
+<wz-step title="Other Information">
+    <p>Even more steps!!</p>
+    <input class="btn btn-primary btn-lg" type="submit" wz-previous value="Back"/>
+    <input class="btn btn-primary btn-lg" type="submit" wz-next value="Next"/>
+</wz-step>
+<wz-step title="Declaration">
+    <p>Even more steps!!</p>
+    <input class="btn btn-primary btn-lg" type="submit" wz-previous value="Back"/>
+    <input class="btn btn-primary btn-lg" type="submit" wz-next value="Next"/>
+</wz-step>
+<wz-step title="Complete">
+    <p>Even more steps!!</p>
+    <input class="btn btn-primary btn-lg" type="submit" wz-previous value="Back"/>
+    <input class="btn btn-primary btn-lg" type="submit" wz-next value="Done"/>
+</wz-step>
+</wizard>
+
+</div>
 
 </body>
+
 </html>
