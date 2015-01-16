@@ -14,10 +14,11 @@
   
   <link ng-href="{{bootstrap_css}}" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/angular-wizard.css" rel="stylesheet">
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
+  <script src="js/html5shiv.js"></script>
   <![endif]-->
 
   <!-- Fav and touch icons -->
@@ -34,35 +35,38 @@
   <script type="text/javascript" src="js/angular.js"></script>
   <script type="text/javascript" src="js/angular-ui-router.js"></script>
   <script type="text/javascript" src="js/ui-bootstrap-tpls.js"></script>
-  
-  
-  
+
+
+
   <script type="text/javascript" src="js/scripts.js"></script>
-  
+
   <script type="text/javascript" src="js/app/directives.js"></script>
   <script type="text/javascript" src="js/app/controllers.js"></script>
   <script type="text/javascript" src="js/app/icp-controllers.js"></script>
-  
+
   <script type="text/javascript" src="js/app/headerController.js"></script>
-  
+  <script type="text/JavaScript" src="js/lodash.min.js"></script>
+  <script type="text/javascript" src="js/angular-wizard.js"></script>
+
+
   <script type="text/javascript" src="js/app/app.js"></script>
-</head>
+  </head>
 
 <body>
 
- 
-<sp-header-nav></sp-header-nav>
-    <div ui-view class="container slide">Please wait for the bench loaded...</div>
- 
 
-      <!-- Here's some values to keep an eye on in the sample in order to understand $state and $stateParams -->
- 
+<sp-header-nav></sp-header-nav>
+<div ui-view class="container slide">Please wait for the bench loaded...</div>
+
+
+<!-- $state.$current is not a public api, we are using it to
+           display the full url for learning purposes-->
+
+<!-- Here's some values to keep an eye on in the sample in order to understand $state and $stateParams -->
+
 <!--     $state = {{$state.current.name}}
       $stateParams = {{$stateParams}}
       $state full url = {{ $state.$current.url.source }} -->
-      
-      <!-- $state.$current is not a public api, we are using it to
-           display the full url for learning purposes-->
 
 <!-- add more function by tab -->
 
