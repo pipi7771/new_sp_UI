@@ -4,7 +4,8 @@ angular.module('myApp', [
   'headerController',
   'icpControllers',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'mgo-angular-wizard'
 ])
 
 .run(
